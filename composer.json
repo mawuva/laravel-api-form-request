@@ -1,0 +1,57 @@
+{
+    "name": "mawuekom/laravel-api-form-request",
+    "description": "Extending FormRequest for REST API Request Validation",
+    "keywords": [
+        "mawuekom",
+        "laravel-api-form-request"
+    ],
+    "homepage": "https://github.com/mawuekom/laravel-api-form-request",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ephraïm Seddor",
+            "email": "seddorephraim7@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0",
+        "mawuekom/laravel-form-request": "dev-main"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mawuekom\\ApiFormRequest\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mawuekom\\ApiFormRequest\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mawuekom\\ApiFormRequest\\ApiFormRequestServiceProvider"
+            ],
+            "aliases": {
+                "ApiFormRequest": "Mawuekom\\ApiFormRequest\\ApiFormRequestFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
