@@ -2,8 +2,8 @@
     "name": "mawuekom/laravel-api-form-request",
     "description": "Extending FormRequest for REST API Request Validation",
     "keywords": [
-        "mawuekom",
-        "laravel-api-form-request"
+        "mawuekom", "laravel", "form-request",
+        "laravel-api-form-request", "api-form-request"
     ],
     "homepage": "https://github.com/mawuekom/laravel-api-form-request",
     "license": "MIT",
