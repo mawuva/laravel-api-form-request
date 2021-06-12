@@ -51,9 +51,12 @@ abstract class ApiFormRequest extends FormRequest
     {
         $laravel = app();
         $version = $laravel::VERSION;
+
         if (substr($version, 0, 3) == '5.4') {
             $errors = $validator->messages()->messages();
-        } else {
+        } 
+        
+        else {
             $errors = (new ValidationException($validator))->errors();
         }
         
@@ -68,7 +71,9 @@ abstract class ApiFormRequest extends FormRequest
 
         if ($this->statusCode == 400) {
             $statusResponse = JsonResponse::HTTP_BAD_REQUEST;
-        } else {
+        } 
+        
+        else {
             $statusResponse = JsonResponse::HTTP_UNPROCESSABLE_ENTITY;
         }
 
@@ -85,6 +90,6 @@ abstract class ApiFormRequest extends FormRequest
      */
     protected function failedAuthorization()
     {
-
+        throw new HttpResponseException(response()->json(['status' => 'failed', 'errors' => 'Unauthorized'], 401));
     }
 }
