@@ -5,7 +5,7 @@
         "mawuekom", "laravel", "form-request",
         "laravel-api-form-request", "api-form-request"
     ],
-    "homepage": "https://github.com/mawuekom/laravel-api-form-request",
+    "homepage": "https://github.com/mawuva/laravel-api-form-request",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.4|^8.0",
         "illuminate/support": "^8.0",
-        "mawuekom/laravel-form-request": "dev-main"
+        "mawuekom/laravel-form-request": "^1.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
